@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-
+from usuarios.models import Funcionario
 # Create your models here.
 
 
@@ -75,6 +75,13 @@ class Movimentacao(BaseModel):
         on_delete=models.PROTECT,
         related_name='movimentacoes'
     )
+
+    # funcionario que fez a venda 
+    funcionario = models.ForeignKey(
+    Funcionario,
+    on_delete=models.PROTECT,
+    related_name='movimentacoes'
+)
 
     tipo = models.CharField(max_length=1, choices=TIPO_CHOICES)
     quantidade = models.PositiveIntegerField()
