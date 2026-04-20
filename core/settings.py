@@ -38,10 +38,10 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uli8l$@7)getl10p9(zw=c=6g5bb_wi%qrko_ooh)&3*&4arz#'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -141,7 +141,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = [os.path.join(BASE_DIR, 'statticfiles')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'statticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
