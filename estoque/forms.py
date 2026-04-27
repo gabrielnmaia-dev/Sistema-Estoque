@@ -4,7 +4,7 @@ from .models import Produto, Movimentacao, Categoria
 class ProdutoForm(forms.ModelForm): #cira um form automatico baseado no model 
     class Meta:
         model = Produto #model
-        fields = ['produto', 'tipo', 'quantidade', 'observacao'] #campos do form
+        fields = ['nome', 'descricao', 'preco', 'quantidade', 'categoria'] #campos do form
         widgets={
             'nome': forms.TextInput(),
             'descricao': forms.TextInput(),
