@@ -4,13 +4,13 @@ from .models import Produto, Movimentacao, Categoria
 class ProdutoForm(forms.ModelForm): #cira um form automatico baseado no model 
     class Meta:
         model = Produto #model
-        fields = ['nome', 'descricao', 'preco', 'quantidade', 'categoria'] #campos do form
+        fields = ['nome', 'preco', 'descricao', 'quantidade', 'categoria'] #campos do form
         widgets={
             'nome': forms.TextInput(),
             'descricao': forms.TextInput(),
             'preco': forms.NumberInput(),
             'quantidade':forms.NumberInput(),   #pra cirar os <input type = 'number' ou 'text'>
-            'categoria': forms.TextInput(),
+            'categoria': forms.Select(),
         }
 
 class CategoriaForm(forms.ModelForm):

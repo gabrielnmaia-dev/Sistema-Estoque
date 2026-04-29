@@ -7,14 +7,11 @@ from .models import Produto, Categoria
 from .forms import ProdutoForm, CategoriaForm
 
 # Create your views here.
-def home(request):
-    return HttpResponse("Home funcionando")
 
-# apenas para rodar migrate
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Views do produto<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 class ProdutoListView(ListView): #view pra mostrar os produtos e junto com as páginas
     model = Produto
-    template_name = 'estoque/templates/produto_list.html' #onde achar o template
+    template_name = 'estoque/produto-list.html' #onde achar o template
     context_object_name = 'produtos'
     paginate_by = 10 #paginação
 
@@ -28,7 +25,7 @@ class ProdutoUpdateView(UpdateView):
     model = Produto
     form_class = ProdutoForm
     template_name = 'estoque/produto_form.html'
-    success_url = reverse_lazy('produto_list')
+    success_url = reverse_lazy('produto-list')
 
 def produto_delete(request, pk):
     produto = get_object_or_404(Produto, pk=pk)
