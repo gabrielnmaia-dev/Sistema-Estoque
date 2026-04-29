@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<h2>Cadatro de Produto</h2>
+
+<form method="post">
+  {% csrf_token %}
+
+  <div class="mb-3">{{ form.nome.label_tag }} {{ form.nome }}</div>
+
+  <div class="mb-3">{{ from.preco.label_tag }} {{ form.preco }}</div>
+
+  <div class="mb-3">{{ form.descricao.label_tag }} {{ form.descricao }}</div>
+
+  <div class="mb-3">{{ form.quantidade.label_tag }} {{ form.quantidade }}</div>
+
+  <div class="mb-3">{{ form.categoria.label_tag }} {{ form.categoria }}</div>
+
+  <button type="submit" class="btn btn-success">Salvar</button>
+  <a href="{% url 'produto-list' %}" class="btn btn-secondary">Canncelar</a>
+</form>
+
+{% endblock %}
