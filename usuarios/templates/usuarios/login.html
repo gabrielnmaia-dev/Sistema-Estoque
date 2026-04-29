@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body">
+                <h4 class="card-tittle text-center mb-4">Entrar</h4>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username" class="form-label"></label>
+                        <input type="text"
+                        id="username"
+                        name="usarname"
+                        class="form-control"
+                        placeholder="Digite seu usuário"
+                        required
+                        />
+                    </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Digite sua senha"
+                        required
+                        />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
+
+                <hr/>
+                <p class="text-center mb-0">
+                    Não tem conta? <a href="{%url 'register'%}">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -14,4 +14,9 @@ urlpatterns = [
     
     # ATIVAR/DESATIVAR funcionário
     path('funcionarios/<int:pk>/toggle/', views.funcionario_toggle_active, name='funcionario-toggle'),
+
+    path('login/', views.login_view, name='login'),
+
+    path('cadastro/', views.register_view, name='register'),
+
 ]
