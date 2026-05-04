@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- Cards de resumo -->
+<div class="row mt-4 mb-4">
+  <div class="col-md-4">
+    <div class="card text-bg-primary">
+      <div class="card-body">
+        <h6>Produtos disponíveis</h6>
+        <p class="fs-2 mb-0">{{ produtos.count }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-bg-success">
+      <div class="card-body">
+        <h6>Minhas saídas hoje</h6>
+        <p class="fs-2 mb-0">{{ saidas_hoje }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabela de produtos disponíveis -->
+<h5>Produtos em estoque</h5>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Categoria</th>
+      <th>Quantidade</th>
+      <th>Preço</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in produtos %}
+    <tr>
+      <td>{{ p.nome }}</td>
+      <td>{{ p.categoria.nome }}</td>
+      <td>{{ p.quantidade }}</td>
+      <td>R$ {{ p.preco }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="4">Nenhum produto em estoque.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<!-- Últimas movimentações do vendedor -->
+<h5 class="mt-4">Minhas últimas movimentações</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Tipo</th>
+      <th>Quantidade</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for m in movimentacoes %}
+    <tr>
+      <td>{{ m.produto.nome }}</td>
+      <td>{{ m.get_tipo_display }}</td>
+      <td>{{ m.quantidade }}</td>
+      <td>{{ m.data|date:"d/m/Y H:i" }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="4">Nenhuma movimentação registrada.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
