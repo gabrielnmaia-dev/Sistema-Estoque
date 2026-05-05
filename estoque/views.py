@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect
 from .models import Produto, Categoria
@@ -30,11 +30,17 @@ class ProdutoUpdateView(GerenteRequiredMixin, UpdateView):
     template_name = 'estoque/produto_form.html'
     success_url = reverse_lazy('produto-list')
 
-def produto_delete(request, pk):
-    produto = get_object_or_404(Produto, pk=pk)
-    #vaio marcar como deletado aqui
-    produto.delete()
-    return redirect('produto-list')
+
+class ProdutoDeleteView(GerenteRequiredMixin, UpdateView):
+    model = Produto
+    fields = []
+    template_name = 'estoque/produto_confirm_delete.html'
+    success_url = reverse_lazy('produto-list')
+
+    def form_valid(self, form):
+        self.object.delete()
+        return redirect(self.success_url)
+    
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Views da categoria<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 class CategoriaListView(GerenteRequiredMixin, ListView):
@@ -55,7 +61,13 @@ class CategoriaUpdateView(GerenteRequiredMixin, UpdateView):
     template_name = 'estoque/categoria_form.html'
     success_url = reverse_lazy('categoria-list')
 
-def categoria_delete(request, pk): #bicho isso aqui é uma view pro softdelete da categoria
-    categoria = get_object_or_404(Categoria,pk=pk)
-    categoria.delete()
-    return redirect('categoria-list')
+
+class CategoriaDeleteView(GerenteRequiredMixin, UpdateView):
+    model = Categoria
+    fields = []
+    template_name = 'estoque/categoria_confirm_delete.html'
+    success_url = reverse_lazy('categoria-list')
+
+    def form_valid(self, form):
+        self.object.delete()
+        return redirect(self.success_url)

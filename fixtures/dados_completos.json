@@ -1,0 +1,355 @@
+[
+{
+  "model": "estoque.categoria",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-05T06:41:49.240Z",
+    "updated_at": "2026-05-05T06:41:49.240Z",
+    "is_deleted": false,
+    "nome": "moveis"
+  }
+},
+{
+  "model": "estoque.categoria",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-05T06:43:42.335Z",
+    "updated_at": "2026-05-05T06:43:42.335Z",
+    "is_deleted": false,
+    "nome": "eletro domestico"
+  }
+},
+{
+  "model": "estoque.categoria",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-05-05T06:45:10.463Z",
+    "updated_at": "2026-05-05T06:45:10.463Z",
+    "is_deleted": false,
+    "nome": "smatphone"
+  }
+},
+{
+  "model": "estoque.produto",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-04-29T02:52:44.460Z",
+    "updated_at": "2026-05-05T06:42:12.716Z",
+    "is_deleted": false,
+    "nome": "mesa",
+    "descricao": "mesa industrial",
+    "preco": "500.00",
+    "quantidade": 20,
+    "categoria": 4
+  }
+},
+{
+  "model": "estoque.produto",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-05T04:26:32.364Z",
+    "updated_at": "2026-05-05T06:42:30.323Z",
+    "is_deleted": false,
+    "nome": "cadeira",
+    "descricao": "cadeira escritorio",
+    "preco": "250.00",
+    "quantidade": 100,
+    "categoria": 4
+  }
+},
+{
+  "model": "estoque.produto",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-05T06:43:03.004Z",
+    "updated_at": "2026-05-05T06:43:03.004Z",
+    "is_deleted": false,
+    "nome": "estante",
+    "descricao": "estante grande",
+    "preco": "150.00",
+    "quantidade": 10,
+    "categoria": 4
+  }
+},
+{
+  "model": "estoque.produto",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-05T06:44:19.643Z",
+    "updated_at": "2026-05-05T06:44:19.643Z",
+    "is_deleted": false,
+    "nome": "aspirador de pó",
+    "descricao": "aspirador de pó do bom",
+    "preco": "250.00",
+    "quantidade": 50,
+    "categoria": 5
+  }
+},
+{
+  "model": "estoque.produto",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-05-05T06:44:59.568Z",
+    "updated_at": "2026-05-05T06:44:59.568Z",
+    "is_deleted": false,
+    "nome": "air fryer",
+    "descricao": "air fryer da boa",
+    "preco": "300.00",
+    "quantidade": 100,
+    "categoria": 5
+  }
+},
+{
+  "model": "estoque.produto",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-05-05T06:45:44.557Z",
+    "updated_at": "2026-05-05T06:45:44.557Z",
+    "is_deleted": false,
+    "nome": "iphone 17",
+    "descricao": "iphone",
+    "preco": "10000.00",
+    "quantidade": 10,
+    "categoria": 6
+  }
+},
+{
+  "model": "usuarios.funcionario",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-05T06:20:24.469Z",
+    "updated_at": "2026-05-05T06:20:24.469Z",
+    "is_deleted": false,
+    "user": 6,
+    "cpf": "11111111111",
+    "telefone": "83999999999"
+  }
+},
+{
+  "model": "usuarios.funcionario",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-05T06:22:43.981Z",
+    "updated_at": "2026-05-05T06:22:43.981Z",
+    "is_deleted": false,
+    "user": 7,
+    "cpf": "22222222222",
+    "telefone": "83888888888"
+  }
+},
+{
+  "model": "usuarios.funcionario",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-05T06:23:26.193Z",
+    "updated_at": "2026-05-05T06:23:26.193Z",
+    "is_deleted": false,
+    "user": 8,
+    "cpf": "33333333333",
+    "telefone": "83777777777"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Jrq3KVEjzSOVwdgtXETbFo$u0xyBUseX2PqmjpEZcTNlPFxb3LBsgDCYOFw9EqZ/mM=",
+    "last_login": "2026-05-05T06:40:38.350Z",
+    "is_superuser": true,
+    "username": "gabdev",
+    "first_name": "",
+    "last_name": "",
+    "email": "gabdev@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-20T16:05:34.770Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$nwWV30bJPtezl8KRmUOluw$js9MqibT606++nWnhSX8lgno4MpoRrOUEENPs5PsPwo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "vendedorTeste",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-20T16:08:33.229Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$qIJsZKa4ehvStPIKNXboDI$AfwG6cVZ72fQZ/7Mn8w2Nl8D+LLxVhg4Xqi56BDJeBg=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "gabrieladmin",
+    "first_name": "",
+    "last_name": "",
+    "email": "gabriel@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-03T14:34:01.138Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$cChclmi5Q23i8AHcq81XtC$pMDTzMMczHZNlbsA9oukIUucXeuuQadLivMQEBL2IeQ=",
+    "last_login": "2026-05-04T01:12:24.135Z",
+    "is_superuser": true,
+    "username": "gabriel",
+    "first_name": "",
+    "last_name": "",
+    "email": "gabriel@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-04T01:11:50.575Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$7AU5dn2bKTlDjFufXtm5Iv$vxU9MC8LNk+gMEnQo4Va5mtuw7dfPNAAb/BawP/Ewdk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gabrielteste",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-04T01:31:46Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$sjQUH5jsLoV2IgNxTMrJUO$fR46aWRiWA63Dl+yibnphodPDtkxC6UO+3ZbrQ4OEXQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "functeste",
+    "first_name": "",
+    "last_name": "",
+    "email": "teste@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-05T06:20:24.312Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$cVt11VUvPHr5C86qXulvP1$JSqe600l4ViTHlaamJJvaQVc7OBTmk0c91IsQgZOMjs=",
+    "last_login": "2026-05-05T06:32:51.204Z",
+    "is_superuser": false,
+    "username": "claudio",
+    "first_name": "",
+    "last_name": "",
+    "email": "claudio@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-05T06:22:43.823Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$l8DIFklOLv7fVOwZFHBWfH$9nkuGeDaMHw5In/YjWASFBxIoHRTtu88qTPFyainosQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "genilson",
+    "first_name": "",
+    "last_name": "",
+    "email": "genilson@gmail.com",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-05-05T06:23:26.040Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Gerente",
+    "permissions": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28,
+      33,
+      34,
+      35,
+      36,
+      29,
+      30,
+      31,
+      32,
+      21,
+      22,
+      23,
+      24,
+      37,
+      38,
+      39,
+      40
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Vendedor",
+    "permissions": []
+  }
+}
+]

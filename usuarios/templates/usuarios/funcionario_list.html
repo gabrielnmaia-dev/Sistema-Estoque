@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% block content %}
+<div class="d-flex justify-content-between aling-itens-center mb-3">
+  <h2>Vendedores</h2>
+  <a href="{% url 'funcionario-create' %}" class="btn btn-primary">Cadastrar</a>
+</div>
+
+<form method="GET" class="mb-3">
+  <div class="input-group" style="max-width: 380px">
+    <input
+      type="text"
+      name="q"
+      value="{{ request.GET.q }}"
+      class="form-control"
+      placeholder="Buscar…"
+    />
+    <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+  </div>
+</form>
+
+<table class="table table-striped aling-middle">
+  <thead class="table-dark">
+    <tr>
+      <th>Usúario</th>
+      <th>CPF</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for f in funcionarios %}
+    <tr>
+      <td>{{ f.user.username }}</td>
+      <td>{{ f.cpf }}</td>
+      <td>{{ f.telefone|default:"-" }}</td>
+      <td>
+        {% if f.user.is_active %}
+        <span class="badge bg-success">Ativo</span>
+        {% else %}
+        <span class="badge bg-secondary">Inativo</span>
+        {% endif %}
+      </td>
+      <td class="d-flex gap-2">
+        <a
+          href="{% url 'funcionario-update' f.pk %}"
+          class="btn btn-warning btn-sm"
+          >Editar</a
+        >
+        <a
+          href="{% url 'funcionario-toggle' f.pk %}"
+          class="btn btn-sm {% if f.user.is_active %}btn-outline-danger{% else %}btn-outline-success{% endif %}"
+          onclick="return confirm('Confirmar?');"
+        >
+          {% if f.user.is_active %}Desativar{% else %}Ativar{% endif %}
+        </a>
+      </td>
+    </tr>
+    {%empty%}
+    <tr>
+      <td colspan="5" class="text-center text-muted">
+        Nenhum Vendedor cadastrado
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if is_paginated %}
+<nav>
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+        >Anterior</a
+      >
+    </li>
+    {% endif %}
+    <li class="page-item disabled">
+      <span class="page-link"
+        >{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span
+      >
+    </li>
+    {% if page_obj.has_next %}
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+        >Próxima</a
+      >
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %} {% endblock content %}
