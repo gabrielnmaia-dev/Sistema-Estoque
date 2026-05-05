@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h4 class="mb-4">Registrar Venda</h4>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger">{{form.non_field_errors}}</div>
+            {% endif %}
+
+            <div class="mb-3">
+                <label class="form-label">Produto</label>
+                {{form.produto}}
+                {% if form.produto.errors %}
+                    <div class="text-danger small">{{form.produto.errors}}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Quantidade</label>
+                {{form.quantidade}}
+                {% if form.quantidade.errors %}
+                    <div class="text-danger small">{{form.quantidade.errors}}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Observação (opcional)</label>
+                {{ form.observacao }}
+            </div>
+
+            <button type="submit" class="btn btn-success">Confirmar Venda</button>
+            <a href="{% url 'vendedor-dashboard' %}" class="btn btn-secondary ms-2">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

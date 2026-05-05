@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.utils import timezone
 
 from estoque.models import Produto, Movimentacao
+from estoque.forms import VendaForm
 from .models import Funcionario
 from .forms import FuncionarioForm, FuncionarioEditForm
 
@@ -188,5 +189,34 @@ class VendedorDashboardView(LoginRequiredMixin, TemplateView):
         ctx['produtos'] = Produto.objects.filter(
             quantidade__gt=0
         ).order_by('nome')
+        ctx['venda_form'] = VendaForm()
 
         return ctx
+
+class VendaCreateView(LoginRequiredMixin, CreateView):
+    model = Movimentacao
+    form_class = VendaForm
+    template_name = 'usuarios/venda_form.html'
+    success_url = reverse_lazy('vendedor-dashboard')
+
+    def dispatch(self, request, *args, **kwargs):
+        #gerente n entra nessa view
+        if request.user.is_authenticated:
+            if request.user.is_staff or request.user.groups.filter(name='Gerente').exists():
+                return redirect('gerente-dashboard')
+        return super().dispatch(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        funcionario = getattr(self.request.user, 'funcionario', None)
+        #aqui verifica se é None o usuário
+        if not funcionario:
+            form.add_error(None, 'Seu usuário não possui perfil de funcionário')
+            return self.form_invalid(form)
+        
+        movimentacao = form.save(commit=False) #cria o objeto
+        movimentacao.tipo = 'S'                #faz o tipo de saída
+        movimentacao.funcionario = funcionario #vincula o processo ao vendedor logado
+
+        movimentacao.full_clean()
+        movimentacao.save() #aqui é onde o produto é descontado do estoque
+        return redirect(self.success_url)
