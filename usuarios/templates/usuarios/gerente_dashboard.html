@@ -1,0 +1,94 @@
+{% extends 'base.html' %} {% block content %}
+<h2 class="mt-4">Visão Geral</h2>
+
+<!-- Cards -->
+<div class="row mt-3 mb-4 g-3">
+  <div class="col-md-3">
+    <div class="card text-bg-primary">
+      <div class="card-body">
+        <h6>Total de Produtos</h6>
+        <p class="fs-2 mb-0">{{ total_produtos }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-bg-danger">
+      <div class="card-body">
+        <h6>Estoque Baixo</h6>
+        <p class="fs-2 mb-0">{{ estoque_baixo.count }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-bg-success">
+      <div class="card-body">
+        <h6>Entradas Hoje</h6>
+        <p class="fs-2 mb-0">{{ entradas_hoje }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-bg-warning">
+      <div class="card-body">
+        <h6>Saídas Hoje</h6>
+        <p class="fs-2 mb-0">{{ saidas_hoje }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Estoque baixo -->
+{% if estoque_baixo %}
+<div class="alert alert-warning">
+  <strong>Atenção!</strong> {{ estoque_baixo.count }} produto(s) com estoque
+  baixo.
+</div>
+<table class="table table-sm table-bordered mb-4">
+  <thead class="table-warning">
+    <tr>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th>Categoria</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in estoque_baixo %}
+    <tr>
+      <td>{{ p.nome }}</td>
+      <td>{{ p.quantidade }}</td>
+      <td>{{ p.categoria.nome }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<!-- Movimentações recentes -->
+<h5>Movimentações Recentes</h5>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Produto</th>
+      <th>Tipo</th>
+      <th>Quantidade</th>
+      <th>Vendedor</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for m in movimentacoes_recentes %}
+    <tr>
+      <td>{{ m.produto.nome }}</td>
+      <td>{{ m.get_tipo_display }}</td>
+      <td>{{ m.quantidade }}</td>
+      <td>{{ m.funcionario.user.username }}</td>
+      <td>{{ m.data|date:"d/m/Y H:i" }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="5">Nenhuma movimentação registrada.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
