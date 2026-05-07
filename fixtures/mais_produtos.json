@@ -1,0 +1,394 @@
+[
+  {
+    "model": "estoque.produto",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Sofa 3 Lugares",
+      "descricao": "Sofa retratil e reclinavel, tecido suede",
+      "preco": "1299.00",
+      "quantidade": 8,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Guarda-Roupa 6 Portas",
+      "descricao": "MDF 15mm, espelho, cabideiro duplo",
+      "preco": "1850.00",
+      "quantidade": 5,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Cama Box Casal Queen",
+      "descricao": "Base box com colchao ortopedico 188x158cm",
+      "preco": "2100.00",
+      "quantidade": 4,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Rack para TV 180cm",
+      "descricao": "MDF, 2 portas, suporta ate 60 polegadas",
+      "preco": "549.00",
+      "quantidade": 12,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Escrivaninha Compacta",
+      "descricao": "Mesa de estudo 90cm, MDF, 2 gavetas",
+      "preco": "389.00",
+      "quantidade": 10,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Poltrona de Leitura",
+      "descricao": "Espuma D33, veludo, pes de madeira",
+      "preco": "699.00",
+      "quantidade": 7,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Prateleira Flutuante 80cm",
+      "descricao": "MDF branco, suporta 15kg, kit 3 unidades",
+      "preco": "129.90",
+      "quantidade": 30,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Mesa de Centro Sala",
+      "descricao": "Tampo de vidro 8mm, base metalica preta",
+      "preco": "449.00",
+      "quantidade": 9,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Cabeceira Casal Estofada",
+      "descricao": "Suede cinza, 160cm, fixacao na parede",
+      "preco": "389.00",
+      "quantidade": 6,
+      "categoria": 4
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Geladeira Brastemp 375L",
+      "descricao": "Frost Free, inverter, inox, 2 portas",
+      "preco": "3299.00",
+      "quantidade": 6,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Maquina de Lavar 11kg",
+      "descricao": "Electrolux, 11 programas, branca",
+      "preco": "1999.00",
+      "quantidade": 8,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Micro-ondas Electrolux 31L",
+      "descricao": "Grill, 8 funcoes automaticas, inox",
+      "preco": "799.00",
+      "quantidade": 14,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Liquidificador Oster 1,5L",
+      "descricao": "1000W, 12 velocidades, copo de vidro",
+      "preco": "249.90",
+      "quantidade": 25,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Cafeteira Nespresso",
+      "descricao": "Capsulas, 19 bar, desligamento automatico",
+      "preco": "499.00",
+      "quantidade": 18,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Ferro de Passar Philips",
+      "descricao": "A vapor, 2600W, base ceramica antiaderente",
+      "preco": "199.90",
+      "quantidade": 35,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Ventilador de Mesa Arno",
+      "descricao": "40cm, 3 velocidades, silencioso",
+      "preco": "159.90",
+      "quantidade": 40,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Batedeira Planetaria 5L",
+      "descricao": "600W, 10 velocidades, 3 acessorios",
+      "preco": "449.00",
+      "quantidade": 12,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Sanduicheira Mondial",
+      "descricao": "750W, placas antiaderentes, luz indicadora",
+      "preco": "89.90",
+      "quantidade": 50,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Purificador de Agua Ibbl",
+      "descricao": "Refrigerado, 3 estagios de filtragem",
+      "preco": "899.00",
+      "quantidade": 3,
+      "categoria": 5
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Samsung Galaxy S24",
+      "descricao": "6.2pol, 256GB, Snapdragon 8 Gen 3",
+      "preco": "4999.00",
+      "quantidade": 8,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Motorola Edge 50 Pro",
+      "descricao": "6.7pol, 512GB, camera 50MP OIS",
+      "preco": "3299.00",
+      "quantidade": 12,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 29,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Xiaomi Redmi Note 13",
+      "descricao": "6.67pol, 128GB, AMOLED 120Hz",
+      "preco": "1199.00",
+      "quantidade": 25,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 30,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Samsung Galaxy A35",
+      "descricao": "6.6pol, 128GB, Super AMOLED",
+      "preco": "1599.00",
+      "quantidade": 20,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 31,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "iPhone 16 128GB",
+      "descricao": "Chip A18, camera 48MP, iOS 18",
+      "preco": "7999.00",
+      "quantidade": 5,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 32,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Motorola Moto G34",
+      "descricao": "6.5pol, 128GB, bateria 5000mAh",
+      "preco": "799.00",
+      "quantidade": 30,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 33,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Poco X6 Pro",
+      "descricao": "6.67pol, 256GB, AMOLED 144Hz",
+      "preco": "1899.00",
+      "quantidade": 15,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 34,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Samsung Galaxy M55",
+      "descricao": "6.7pol, 128GB, carregamento 45W",
+      "preco": "1799.00",
+      "quantidade": 18,
+      "categoria": 6
+    }
+  },
+  {
+    "model": "estoque.produto",
+    "pk": 35,
+    "fields": {
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:00:00Z",
+      "is_deleted": false,
+      "nome": "Asus Zenfone 11 Ultra",
+      "descricao": "6.78pol, 256GB, Snapdragon 8 Gen 3",
+      "preco": "4599.00",
+      "quantidade": 4,
+      "categoria": 6
+    }
+  }
+]
