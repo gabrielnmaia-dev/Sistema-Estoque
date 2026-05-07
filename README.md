@@ -111,7 +111,7 @@ Usuários devem ser atribuídos a um grupo (Gerente ou Vendedor).
 
 ## 📌 Observações
 
-- O sistema não utiliza o Django Admin
+- O sistema utiliza o Django Admin apenas para cadastro dos gerentes
 - Todas as funcionalidades foram implementadas manualmente com CBVs
 - Projeto desenvolvido para fins acadêmicos
 
